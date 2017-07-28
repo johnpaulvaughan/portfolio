@@ -1,0 +1,76 @@
+@import "../../../scss/variables";
+$bgcolor: $background-color-dark;
+:host {
+    overflow: hidden;
+    margin: 100px 0 100px 0;
+    margin-top: 8rem !important;
+    text-align: left;
+    .caption {
+        display: block;
+        padding-bottom: 1rem;
+        width: 100%;
+        padding-left: 1rem;
+        @media #{$max-width-sm} {
+        margin-bottom: 5rem;
+      }
+    }
+    h2 {
+        display: block;
+        font-size: 2.5rem;
+        padding-right: 20px;
+        color: black;
+        font-weight: normal;
+        margin: 0.75rem 0 1rem 0;
+        line-height: 1.25em;
+    }
+    h3 {
+        display: block;
+        font-size: 0.75rem;
+        color: black;
+        font-weight: normal;
+        margin: 0 0 1rem 0;
+        line-height: 1.25em;
+        letter-spacing:0.15em;
+        color:$font-highlight;
+    }
+    p {
+        display: block;
+        font-size: 1.25rem;
+        line-height:1.5em;
+        color: grey;
+        max-width: 75%;
+        @media #{$max-width-sm} {font-size:1rem;max-width: 90%;}
+    }
+    img {
+        transition: transform 0.35s;
+        @media #{$min-width-lg} {
+            //max-height: 322px;
+        }
+    }
+}
+
+:host:hover {
+    cursor: pointer;
+    h2 {
+        //transform: translate3d(0, -120px, 0);
+    }
+    p {
+        //opacity: 1;
+        //transform: translate3d(0, 0, 0);
+    }
+    img {
+        //transform: translate3d(0,-10px,0);
+        opacity: 0.95;
+    }
+}
+
+//define animations
+@keyframes fadeinout {
+    0%,
+    100% {
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+}

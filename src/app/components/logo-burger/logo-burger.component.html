@@ -1,0 +1,7 @@
+<!-- logo burger -->
+<!-- imported logo by opening svg and adding reference variables (#j #p1 #p2 #v) to the deepest paths / lines / polylines -->
+<a id="logo" #logo class="ui header item" (click)="showNav()" [@logoState]="logoState" (@logoState.done)="animatingLogo($event)" [attr.data-state]="logoState">
+    <img *ngIf="logoState=='black'" src="assets/jpv-black.svg">
+    <img *ngIf="logoState=='white'" src="assets/jpv-white.svg">
+</a>
+<button type="button" class="hamburger" (click)="hideNav()"><span class="bar"></span><span class="bar"></span></button>

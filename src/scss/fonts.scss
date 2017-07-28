@@ -1,0 +1,73 @@
+// import Fonts
+@import url(https://fonts.googleapis.com/css?family=Merriweather:300,400,700|Merriweather+Sans:300,700);
+
+//import semantic-ui icons
+@font-face {
+    font-family: 'Icons';
+    src: url('/assets/fonts/icons.eot'); /* IE9 Compat Modes */
+    src: url('/assets/fonts/icons.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('/assets/fonts/icons.woff') format('woff'), /* Modern Browsers */
+    url('/assets/fonts/icons.ttf') format('truetype'), /* Safari, Android, iOS */
+    url('/assets/fonts/icons.svg') format('svg'); /* Legacy iOS */
+}
+
+
+$font-family-headings: 'Merriweather',serif;
+$font-family: 'Merriweather Sans',sans-serif;
+// default sizings
+html,
+body,
+p,
+a {
+    font-family: $font-family-headings !important;
+    font-weight:400 !important;
+    &.sans {
+      font-family: $font-family !important;
+    }
+    &.light {
+      font-weight:300 !important;
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: $font-family-headings !important;
+    margin-top: 2em;
+    color: black;
+    line-height: 2em;
+}
+
+h3 {
+    color: black;
+    text-transform: uppercase;
+    text-align: left;
+    font-size: 75%;
+    letter-spacing: 0.5em;
+    //font-weight: 500;
+    margin-bottom: 5rem;
+    font-family: $font-family !important;
+}
+
+
+
+p {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 2em;
+    color: rgb(34, 34, 35);
+    @media screen and (min-width: 900px) {
+        font-size: 18px;
+    }
+    @media screen and (min-width: 1200px) {
+        font-size: 20px;
+        &.lead {
+          font-size: 24px;
+        }
+        &.smaller {
+          font-size:18px;
+        }
+    }
+}

@@ -1,0 +1,82 @@
+@import '../../../scss/variables.scss';
+:host {
+  display: block;
+  padding-top: 0;
+  padding-bottom: $logo-icon-inset;
+  margin: 0 auto !important;
+  .masthead {
+    height: calc(100vh - (#{$logo-icon-inset} * 2));
+    @media #{$max-width-sm} {
+      height: auto;
+    }
+    width: $container-width;
+    @media #{$only-small-monitor} {width:100vw;}
+    @media #{$only-tablet} {width:100vw;}
+    @media #{$max-width-sm} {
+      width: $container-width-mobile;
+    }
+    margin: 0 auto !important;
+    margin-bottom: 2rem !important;
+    div.row {
+      padding: 0 !important;
+        div.column {
+      @media #{$max-width-sm} {
+          width: $container-width-mobile !important;
+          margin: 0 auto !important;
+        }
+      &.hero-pic { padding-left: 0 !important;}
+      }
+      div.hero {
+        height: 100%;
+        width: 100%;
+        @media #{$only-tablet} {height:85vh;margin-top:4vh;}
+        @media #{$only-small-monitor} {height:80vh;margin-top:7vh;}
+        background-position: right bottom;
+        background-size: cover;
+        background-repeat:no-repeat;
+        @media #{$max-width-sm} {
+          height: 50vh;
+          margin-top:3.5rem;
+          background-size: contain;
+          background-position:center center;
+        } 
+        @media (min-device-width: 1000px) and (max-device-height: 500px) {
+          & {
+            background-color: #ddd;
+          }
+        }
+      }
+      .inset {
+        padding-left: $text-indent*2;
+        a {
+          margin-top: 4rem;
+          display: block;
+        }
+      }
+    }
+    img {
+      background-color: #222;
+    }
+    a.down {
+      i.arrow.down {
+        margin: 5rem 0 0 0;
+        padding: 0;
+        display: block;
+        transform: scale(1, 3);
+        padding-left: 0px !important;
+        color: #ccc;
+        text-align: left;
+        width: 100%;
+      }
+    }
+  }
+  h2 {
+    font-size: 3rem;
+    letter-spacing: 0.05em;
+    margin-bottom: 1rem;
+  }
+  h3 {
+    color: black;
+    @media #{$max-width-sm} { margin-bottom:2rem;}
+  }
+}

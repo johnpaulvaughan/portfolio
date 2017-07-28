@@ -1,0 +1,71 @@
+@import "../../../scss/variables";
+$bgcolor: $background-color-dark;
+:host {
+    padding: 0 !important;
+    margin: 100px 0 0 0;
+    text-align: left;
+    .caption {
+      display:block;
+        padding-bottom: 1rem;
+        width:100%;
+        padding-left:1rem;
+    }
+    h2 {
+      display:inline-block;
+      font-size:2.5rem;
+      padding-right:20px;
+      color:black;
+      font-weight:normal;
+      margin:0;
+
+    }
+    p {
+      display:inline-block;
+      font-size:1rem;
+      color:#9e9e9e;
+    }
+    img {
+        transition: transform 0.35s;
+        @media #{$min-width-lg} {
+         //max-height: 322px;
+        }
+    }
+    .column {
+        //padding: 0 !important;
+        //margin: 0;
+        //background-color: $bgcolor;
+        color: black;
+        overflow: hidden;
+        @media #{$min-width-lg} {
+            //height: 25%;
+        }
+    }
+}
+
+:host:hover {
+    cursor: pointer;
+    .column {
+        h2 {
+            //transform: translate3d(0, -120px, 0);
+        }
+        p {
+            //opacity: 1;
+            //transform: translate3d(0, 0, 0);
+        }
+        img {
+            //transform: translate3d(0,-10px,0);
+            opacity:0.95;
+        }
+    }
+}
+
+//define animations
+@keyframes fadeinout {
+    0%,
+    100% {
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+}

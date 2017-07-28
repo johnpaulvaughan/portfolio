@@ -1,0 +1,60 @@
+<!-- intro -->
+<div class="row" *ngIf="project.detail.intro.image">
+  <div class="twelve wide column"><img class="ui fluid image" src="{{project.detail.intro.image}}"></div>
+</div>
+<!-- sections -->
+<div *ngFor="let section of project.detail.sections" class="section">
+  <!-- title and blurb -->
+  <div class="ui grid container wide">
+    <div class="row pad-top">
+      <div class="sixteen wide tablet ten wide column">
+        <h3>{{section.title}}</h3>
+        <div *ngIf="section.blurb" [innerHTML]="section.blurb"></div>
+      </div>
+    </div>
+  </div>
+  <!-- images -->
+  <div *ngFor="let image of section.images">
+    <div class="row" [ngClass]="(image.pad==false)?'no-pad':'pad-top'" *ngIf="image.type == 'full'">
+    <div class="sixteen wide column">
+      <img class="ui fluid image" src="{{image.path}}">
+      </div>
+    </div>
+    <div class="ui container wide" *ngIf="image.type == 'wide'">
+      <div class="row" [ngClass]="(image.pad==false)?'no-pad':'pad-top'">
+        <div class="twelve wide column"><img class="ui fluid image" src="{{image.path}}"></div>
+      </div>
+    </div>
+    <div class="ui container wide" *ngIf="image.type == 'split'">
+    <div class="ui stackable grid split">
+      <div class="row pad-top">
+      <div class="eight wide column"><img class="ui fluid image" src="{{image.path[0]}}"></div>
+      <div class="eight wide column"><img class="ui fluid image" src="{{image.path[1]}}"></div>
+      </div>
+    </div>
+    </div>
+  </div>
+</div>
+<!-- box -->
+<div *ngIf="project.detail.box.blurb" class="ui container wide">
+  <div class="ui vertical overview padded stackable grid">
+    <div class="row pad-top flush">
+      <div class="eight wide column"><img class="ui fluid image" src="{{project.detail.box.image}}"></div>
+      <div class="eight wide column flex">
+        <div class="ui center aligned grid big-message" [style.background-color]='project.detail.box.colour'>
+          <div class="row">
+            <div class="column"></div>
+          </div>
+          <div class="center aligned row">
+            <div class="middle aligned column">
+              <h4 class="special">{{project.detail.box.blurb}}</h4>
+            </div>
+          </div>
+          <div class="row">
+            <div class="column"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

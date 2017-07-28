@@ -1,0 +1,17 @@
+<div id="portfolio-intro" [class.show-intro]="showIntro">
+    <div class="ui container wide">
+        <div class="intro">
+            <h3>Work</h3>
+            <p class="lead">Taking ideas and making them tangible.</p>
+            <p class="lead">A showcase of creative problem solving.</p>
+        </div>
+    </div>
+</div>
+<div id="portfolio" class="ui container wide">
+    <div class="ui equal width two column doubling stackable relaxed grid">
+        <div class="row">
+        <portfolio-grid-stub class="column" *ngFor="let project of stubs" [project]=project (click)='projectClicked(project, i)'></portfolio-grid-stub>
+        </div>
+    </div>
+</div>
+<div style="height:500px;display:block;"></div> 

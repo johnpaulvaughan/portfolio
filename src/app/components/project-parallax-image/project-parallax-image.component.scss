@@ -1,0 +1,15 @@
+@import "../../../scss/variables";
+
+:host {
+  div {
+    margin-top: $pad;
+    margin-bottom: $pad;
+    height: 66vh;
+    max-height:600px;
+    background-color:#ccc;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: 50%;
+    background-repeat: no-repeat;
+  }
+}

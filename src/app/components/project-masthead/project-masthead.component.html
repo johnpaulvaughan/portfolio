@@ -1,0 +1,25 @@
+<div class="{{project.id}} ui vertical stackable masthead grid">
+    <div class="left aligned row">
+    <div class="
+    sixteen wide mobile 
+    eight wide tablet 
+    eight wide computer
+    eleven wide large screen
+    eleven wide widescreen
+    column hero-pic">
+    <div class="hero" [@fadeInOnLoad] [style.background-image]="'url(' + project.detail.masthead.image + ')'"></div>
+    </div>
+        <div class="
+        sixteen wide mobile 
+        seven wide tablet 
+        seven wide computer 
+        five wide large screen
+        five wide widescreen
+        left middle aligned column inset">
+            <h3><span>{{project.name}}</span></h3>
+            <div [innerHTML]='project.detail.masthead.blurb'></div>
+            <a href="{{project.overview.website}}" target="_blank">View Website<i class="long arrow right icon"></i></a>
+            <a href="#overview" scrollTo class="down"><i class="long arrow down icon"></i></a>
+        </div>
+    </div>
+</div> 

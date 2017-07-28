@@ -1,0 +1,57 @@
+<div id="squares" #squares></div>
+<div class="ui vertical masthead padded grid">
+    <div class="row">
+        <div class="column"></div>
+    </div>
+    <div class="center aligned row">
+        <div class="ui container wide">
+            <div class="bottom aligned column" id="text-boundary">
+                <p class="intro1 sans">Portfolio of a digital&nbsp;creative</p>
+                <div class="rotation">
+                    <h1 class="ui header" [attr.data-animate-text]="animateText" (click)='animateText = !animateText'>
+        <div class="line l1">
+          <div class="words">
+            <span class="word 1"><span class="letters 1">5 </span></span>
+            <span class="word 2"><span class="letters 2">years </span></span>
+            <span class="word 3"><span class="letters 3">in </span></span>
+            <span class="word 4"><span class="letters 4">corporate </span></span>
+            <span class="word 5"><span class="letters 5">design </span></span>
+            <span class="word 6"><span class="letters 6">studios. </span></span>
+          </div>
+        </div>
+        <div class="line l2">
+          <div class="words">
+            <span class="word 1"><span class="letters 1">6 </span></span>
+            <span class="word 2"><span class="letters 2">years </span></span>
+            <span class="word 3"><span class="letters 3">full </span></span>
+            <span class="word 4"><span class="letters 4">service </span></span>
+            <span class="word 5"><span class="letters 5">agency </span></span>
+            <span class="word 6"><span class="letters 6">experience. </span></span>
+          </div>
+        </div> 
+        <div class="line l3">
+          <div class="words">
+            <span class="word 1"><span class="letters 1">12 </span></span>
+            <span class="word 2"><span class="letters 2">years </span></span>
+            <span class="word 3"><span class="letters 3">concurrent </span></span>
+            <span class="word 4"><span class="letters 4">digital </span></span>
+            <span class="word 5"><span class="letters 5">freelance. </span></span>
+          </div>
+        </div>
+      </h1>
+                </div>
+                <p class="intro1 sans">John Paul Vaughan</p>
+                <a scrollTo href="#about" style="color:white;"><i class="long arrow down icon" style="color:white;"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="about">
+    <div class="ui container wide">
+        <div class="inset">
+            <h3 class="about1">About me</h3>
+            <p class="about2 lead">Hi. I'm John Vaughan, a digital creative based in Newcastle, Australia. <br>I currently work as Creative Director and Lead Developer for a boutique full service brand agency and occasionally take on freelance projects.</p>
+            <a routerLink="/about">Learn more <i class="long arrow right icon"></i></a>
+        </div>
+    </div>
+</div>

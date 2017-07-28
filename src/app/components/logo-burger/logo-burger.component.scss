@@ -1,0 +1,72 @@
+@import '../../../scss/variables.scss';
+:host {
+    padding-top: $logo-icon-inset;
+    padding-bottom: $logo-icon-inset;
+    padding-right: $logo-icon-inset;
+    @media #{$max-width-sm} {
+    padding-top: $logo-icon-inset-mobile;
+    padding-bottom: $logo-icon-inset-mobile;
+    padding-right: $logo-icon-inset-mobile;
+    }
+    a#logo {
+        padding: 0;
+        width: $logo-icon-size;
+        @media #{$max-width-sm} {width: $logo-icon-size-mobile;}
+        display: block;
+        position:relative;
+        margin: 0 auto;
+        path {
+            fill: white;
+        }
+        img {
+            width: 100%;
+        }
+    }
+    .hamburger {
+        display: none;
+    }
+    @media #{$max-width-sm} {
+        position:relative;
+        //right:-30px;
+        //top:-30px;
+    }
+}
+
+:host(.NavIsOpen) {
+    #logo {
+        display: none;
+    }
+    .hamburger {
+        display: block;
+        width: $logo-icon-size;
+        height: $logo-icon-size;
+        margin-top: $logo-icon-inset - ($logo-icon-size/5);
+        margin-right: $logo-icon-inset;
+        position: absolute;
+        right: 0px;
+        top: 0px;
+        overflow: hidden;
+        border: none;
+        //background: url(../img/cross.png) no-repeat center center;
+        background-color: rgba(0, 0, 0, 0);
+        text-indent: 200%;
+        color: transparent;
+        outline: none;
+        z-index: 100;
+        transition: .25s ease-in-out;
+        span {
+            transform: rotate(45deg);
+            display: block;
+            position: absolute;
+            height: 9px;
+            width: 100%;
+            background: #fff;
+            border-radius: 3px;
+            opacity: 1;
+            left: 0;
+            &:nth-child(2) {
+                transform: rotate(-45deg);
+            }
+        }
+    }
+}

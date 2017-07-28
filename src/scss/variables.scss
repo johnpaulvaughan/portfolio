@@ -1,0 +1,48 @@
+@import 'fonts.scss';
+
+$backgroundcolor: #fff !default;
+$background-color-dark: #000 !default;
+$background-color-dark-secondary: #222 !default;
+$bodytextcolor: #000;
+$highlight1: rgba(0, 174, 239, 1);
+$highlight2: #ff007e;
+$font-highlight:#4183C4;
+$pad: 5vw;
+//desktop dimensions
+$container-width: 80vw;
+$logo-icon-size: 4.5rem;
+$logo-icon-inset: 3.5rem;
+$text-indent: 1.5rem; //this is used to align the text to the images (the image grid has padding to seperate pictures when placed in columns )
+//mobile dimensions
+$container-width-mobile: 90vw;
+$logo-icon-size-mobile: 3.5rem;
+$logo-icon-inset-mobile: 0.75rem;
+$text-indent: 1.5rem;
+
+
+
+
+//these match semantic-ui-sass
+$xs : 320px;
+$sm : 768px;
+$md : 992px;
+$lg : 1280px;
+$xl : 1920px;
+
+
+$max-width-xs : "only screen and (max-width : #{($xs)-1})";
+$min-width-xs : "only screen and (min-width : #{($xs)})";
+$max-width-sm : "only screen and (max-width : #{($sm)-1})";
+$min-width-sm : "only screen and (min-width : #{($sm)})";
+$max-width-md : "only screen and (max-width : #{($md)-1})";
+$min-width-md : "only screen and (min-width : #{($md)})";
+$max-width-lg : "only screen and (max-width : #{($lg)-1})";
+$min-width-lg : "only screen and (min-width : #{($lg)})";
+$max-width-xl : "only screen and (max-width : #{($xl)-1})";
+$min-width-xl : "only screen and (min-width : #{($xl)})";
+
+$only-mobile : $max-width-sm;
+$only-tablet : "only screen and (min-width: #{($sm)}) and (max-width: #{($md)-1})";
+$only-small-monitor : "only screen and (min-width: #{($md)}) and (max-width: #{($lg)-1})";
+$only-large-monitor : "only screen and (min-width: #{($lg)}) and (max-width: #{($xl)-1})";
+$only-xl-monitor : $min-width-xl;

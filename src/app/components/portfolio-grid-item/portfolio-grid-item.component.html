@@ -1,0 +1,16 @@
+<div class="column" *ngIf="project.overview.images['1']">
+    <img class="ui fluid image" src="{{project.overview.images['1']}}"></div>
+<div class="column tablet" *ngIf="project.overview.images['2']">
+    <img class="ui fluid image" src="{{project.overview.images['2']}}">
+</div>
+<div class="column large screen only" *ngIf="project.overview.images['3']">
+    <img class="ui fluid image" src="{{project.overview.images['3']}}">
+</div>
+<div class="column large screen only" *ngIf="project.overview.images['4']">
+    <img class="ui fluid image" src="{{project.overview.images['4']}}">
+</div>
+<div class="caption">
+    <h2>{{project.name}}.</h2>
+    <p>{{project.overview.blurb}}</p>
+    <a routerLink="/work" fragment="#"><i class="long arrow right icon"></i></a>
+</div>

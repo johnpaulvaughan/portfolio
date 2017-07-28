@@ -1,0 +1,235 @@
+@import "../../../scss/variables";
+$indent:3rem;
+:host {
+    position: relative;
+    .masthead {
+        background: none;
+        position: relative;
+        $frame: 100;
+        $frameMargin: (100-$frame)/2;
+        height: #{$frame}vh;
+        width:#{$frame}vw;
+        &.ui.padded.grid:not(.vertically):not(.horizontally) {
+            margin:#{$frameMargin}vh #{$frameMargin}vw !important;
+        }
+        color: $bodytextcolor;
+        * {
+            color: $bodytextcolor;
+        }
+        /* 
+        * hero message
+        */
+        #text-boundary {
+            div.rotation {
+                margin-top: 2rem;
+                margin-bottom: 2rem;
+                height: 25rem;
+                @media #{$max-width-sm} {
+                    padding-left: $text-indent;
+                    height: 20rem;
+                }
+            }
+            p.intro1 {
+              max-width:80vw;
+            }
+            p.intro1,
+            p.intro2 {
+                padding-left: $text-indent;
+                color: white;
+                text-transform: uppercase;
+                text-align: left;
+                font-size: 75%;
+                letter-spacing: 0.5em;
+                font-weight: 500;
+                //margin-bottom:10rem;
+            }
+            h1.ui.header {
+                //position: relative;
+                position: relative;
+                font-weight: 700;
+                color: $bodytextcolor;
+                z-index: 10;
+                font-size: 4.8rem;
+                letter-spacing: 0.05em;
+                text-align: left;
+                @media #{$max-width-md} {
+                    font-size: 3.8rem;
+                }
+                @media #{$max-width-sm} {
+                    font-size: 2.8rem;
+                }
+                div.line {
+                    max-width: 48vw;
+                    @media #{$max-width-sm} {
+                        max-width: 80vw;
+                    }
+                    padding: 1vw;
+                    margin-bottom: 0.5vw;
+                    display: inline;
+                    position: absolute;
+                    top: 0%;
+                    overflow: hidden;
+                    span.letters {
+                        display: inline-block;
+                        position: relative;
+                        transform: translateX(-100%);
+                    }
+                    div.words {
+                        display: block;
+                        position: relative;
+                        span.word {
+                            display: inline-block;
+                            position: relative;
+                            overflow: hidden;
+                            span.letters {
+                                color: white;
+                                font-family: $font-family-headings !important;
+                                font-weight: 700;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+/* 
+    *
+    * About me section. todo: need to move this to its own section.
+    *
+    */
+
+div#about {
+    background-color: #eee;
+    padding-top: 15rem;
+    padding-bottom: 15rem;
+    @media #{$max-width-sm} {
+    padding-top: 7.5rem;
+    padding-bottom: 7.5rem;
+    }
+    div.inset {
+        padding-left: $text-indent;
+        width: 70%;
+        @media #{$max-width-sm} {
+            width: 85%
+        }
+    }
+    p.about1 {
+        color: black;
+        text-transform: uppercase;
+        text-align: left;
+        font-size: 75%;
+        letter-spacing: 0.5em;
+        font-weight: 400;
+        margin-bottom: 5rem;
+    }
+}
+
+
+/* 
+    *
+    * TEXT ANIMATIONS
+    *
+    */
+
+.letters {
+    animation-name: slide-text-in;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
+    animation-play-state: running;
+}
+
+div.line.l1 .letters {
+    animation-delay: 0s;
+}
+
+div.line.l2 .letters {
+    animation-delay: 5s;
+}
+
+div.line.l3 .letters {
+    animation-delay: 10s;
+}
+
+@keyframes slide-text-in {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    4% {
+        transform: translateX(0%);
+        opacity: 1;
+    }
+    34% {
+        transform: translateX(0%);
+        opacity: 1;
+    }
+    36% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    99% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+}
+
+
+/* 
+    *
+    * BACKGROUND GRADIENT transistions (made from multiple little squares)
+    *
+    */
+
+//host /deep/ is required for dynamically added content such as those squares.
+:host /deep/ div#squares {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    position: absolute;
+    background-color: #000;
+    animation-name: fly-squares-in;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    //background-color: #000;
+    div.square {
+        width: 5vw;
+        height: 5vw;
+        display: inline-block;
+        position: relative;
+    }
+    @keyframes fly-squares-in {
+        0% {
+            height: 0;
+        }
+        100% {
+            height: 100vh;
+        }
+    }
+    @keyframes pulse {
+        0% {
+            background-color: #fff;
+        }
+        25% {
+            background-color: #d3e1fd;
+        }
+        50% {
+            background-color: #c3fdf3;
+        }
+        75% {
+            background-color: #ffd7ff;
+        }
+        100% {
+            background-color: #fffdc4;
+        }
+    }
+}

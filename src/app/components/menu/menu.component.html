@@ -1,0 +1,20 @@
+<!-- overlay menu -->
+<div class="overlay" [class.open]="navToggle">
+    <nav>
+        <ul>
+            <li><a routerLink="hello" (click)="closeNav()" routerLinkActive="active" class="ui header">Welcome</a></li>
+            <li><a routerLink="work" (click)="closeNav()" routerLinkActive="active" class="ui header">Work</a></li>
+            <li><a routerLink="about" (click)="closeNav()" routerLinkActive="active" class="ui header">About <span class="jpv">JPV</span></a></li>
+            <li><a routerLink="contact" (click)="closeNav()" routerLinkActive="active" class="ui header">Get in touch</a></li>
+        </ul>
+    </nav>
+</div>
+<!-- header logo button -->
+<div class="ui fixed secondary menu">
+    <div class="left menu">
+        <menu-back-button [style.opacity]="backButton ? 1 : 0"></menu-back-button>
+    </div>
+    <div class="right menu">
+        <logo-burger [NavIsOpen]='navToggle' (openNav)="openNav($event)" (closeNav)="closeNav($event)"></logo-burger>
+    </div>
+</div>

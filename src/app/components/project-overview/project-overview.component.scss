@@ -1,0 +1,48 @@
+@import '../../../scss/variables.scss';
+:host {
+  position: relative;
+  #project-intro {
+    background-color: black;
+    padding-left: 1.5rem;
+    padding-bottom: 5rem;
+    margin-bottom: 2rem; //height: 15rem;
+    width: 100vw;
+    min-height: 30vh;
+    .intro {
+      padding-top: 5rem;
+      * {
+        color: white !important;
+      }
+      p {
+        font-size: 3rem;
+        font-family: $font-family-headings !important;
+      }
+    }
+  }
+  .info {
+    &.inset {
+      padding-left: $text-indent*2;
+      @media #{$max-width-sm} {
+        &.wide.column.right.floated { padding-top: 2rem !important; }
+      }
+    }
+    text-align: left;
+    span.label {
+      font-family: $font-family;
+      text-transform: uppercase;
+      font-size: 75%;
+      letter-spacing: 0.5em;
+      font-weight: 500;
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+    span.info {
+      font-family: $font-family-headings;
+      font-weight: 700 !important;
+      font-size: 125%;
+      padding-bottom: 2rem;
+      display: block;
+      line-height: 2em;
+    }
+  }
+}

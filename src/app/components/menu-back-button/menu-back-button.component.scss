@@ -1,0 +1,29 @@
+@import '../../../scss/variables.scss';
+:host {
+  position: fixed;
+  top: $logo-icon-inset / 1.5;
+  left: $logo-icon-inset;
+  padding: 0 !important;
+  @media #{$max-width-sm} {
+    padding: 0 !important;
+    top: 0;
+    left: -$logo-icon-inset-mobile;
+  }
+  z-index:10;
+  padding-top: $logo-icon-inset;
+  padding-bottom: $logo-icon-inset;
+  width: (100vw - $container-width) / 2;
+  transition: opacity 1s //z-index: 10;
+  #back-button {
+    padding: 0;
+    width: $logo-icon-size;
+    display: block;
+    position: relative;
+    margin: auto 0 auto;
+  }
+    @media #{$max-width-sm} {
+      #back-button i.icon {
+        color: #fff;
+      }
+    }
+}

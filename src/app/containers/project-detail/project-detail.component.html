@@ -1,0 +1,10 @@
+<div *ngIf="project">
+    <project-masthead [project]=project></project-masthead>
+    <div class="tinted" id="overview">
+        <project-overview [project]=project></project-overview>
+        </div>
+        <div class="loose">
+    <project-nitty-gritty [project]=project></project-nitty-gritty>
+    </div>
+</div>
+<div style="height:100px;"></div>

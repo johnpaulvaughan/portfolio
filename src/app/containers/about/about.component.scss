@@ -1,0 +1,39 @@
+@import "../../../scss/variables";
+$indent:3rem;
+:host {
+  div#about {
+    display: block;
+    background-color: #eee;
+    p.about1 {
+      color: black;
+      text-transform: uppercase;
+      text-align: left;
+      font-size: 75%;
+      letter-spacing: 0.5em;
+      font-weight: 400;
+      margin-bottom: 5rem;
+
+    }
+    i.long.arrow.down {
+      padding-left: 0rem !important;
+    }
+  }
+  div.inset {
+    padding-left: $text-indent;
+    width: 70%;
+    @media #{$max-width-sm} {
+      width: 85%
+    }
+  }
+  div.padded {
+    padding-top: 15rem;
+    padding-bottom: 15rem;
+    @media #{$max-width-sm} {
+    padding-top: 7.5rem;
+    padding-bottom: 5rem;
+    }
+  }
+  p.loose {
+    margin-top: 5rem;
+  }
+}
